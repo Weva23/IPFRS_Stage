@@ -85,7 +85,7 @@ class EtudiantController extends Component
     {
         $request->validate([
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'nni' => 'required|digits:10|integer|gt:0',
+            'nni' => 'required|integer',
             'nomprenom' => 'required|string',
             'diplome' => 'nullable|string',
             'genre' => 'required|string',
@@ -93,7 +93,7 @@ class EtudiantController extends Component
             'adress' => 'nullable|string',
             'datenaissance' => 'nullable|date',
             'email' => 'nullable|email',
-            'phone' => 'required|digits:8|integer|gt:0',
+            'phone' => 'required|integer',
             'wtsp' => 'nullable|integer',
             'country_id' => 'required|exists:countries,id',
         ]);
